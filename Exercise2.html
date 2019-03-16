@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Calculator JDC</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Style Kalkulator -->
+    <style>
+
+            .layoutcalc{
+            width: 300px;
+            padding: 0px;
+            border-radius: 15px;
+            margin:50px auto 0 auto;
+            box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+            transition: 0.3s;
+            }
+
+            #dispcalc{
+                width: 100%;
+                height: 75px;
+                padding: 7px 15px;
+                box-sizing: border-box;
+                text-align: right;
+                font-weight: bold;
+                font-size: 25px;
+                border-radius: 15px 15px 0px 0px;
+                background-color: #434551;
+                border:1px solid #cecece;
+                color:white;
+                outline:none;
+                border-left-width: 0px;
+                border-right-width: 0px;
+            }
+
+            .container-btn{
+            display: flex;
+            flex-wrap: wrap;
+            }
+
+            .btn{
+            display: flex;
+            width: 25%;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            font-size: 20px;
+            height:70px;
+            color:grey;
+            font-weight:bold;
+            border: 1px solid #cecece;
+            border-top:none;
+            border-left:none;
+            background: white;
+            }
+
+            .btn:nth-child(4n+1){
+            border-left: 1px solid #cecece;
+            }
+
+            .btn:hover{
+            background:#e4e4e4;
+            cursor:pointer;
+            }
+
+            #nol{
+            flex-grow:1;  
+            }
+
+            #hitung{
+            background: #43e8e4;
+            color: white;
+            }
+
+            #hitung:hover{
+            background:#43e8e5c0;
+            }
+
+            .opr{
+            background: #ededee;
+            }
+
+            .btn-bawah-kiri{
+                border-radius: 0px 0px 0px 15px;
+            }
+
+            .btn-bawah-kanan {
+                border-radius: 0px 0px 15px 0px;
+            }
+
+            /* footer mark */
+            .footermark{
+                text-align: center;
+                width: 300px;
+                margin:50px auto 0 auto;
+                color: grey;
+                font-weight: 700;
+            }
+    </style>
+</head>
+<body>
+
+    <div class="layoutcalc">
+         <input type="text" id="dispcalc" value="" readonly="true">
+            <div class="container-btn">
+                <span class="btn opr" id="clear">C</span>
+                <span class="btn opr" id="hapus">del</span>
+                <span class="btn opr" id="titik">.</span>
+                <span class="btn opr" id="bagi">/</span>
+                <span class="btn" id="tujuh">7</span>
+                <span class="btn" id="delapan">8</span>
+                <span class="btn" id="sembilan">9</span>
+                <span class="btn opr" id="kali">*</span>
+                <span class="btn" id="empat">4</span>
+                <span class="btn" id="lima">5</span>
+                <span class="btn" id="enam">6</span>
+                <span class="btn opr" id="tambah">+</span>
+                <span class="btn" id="satu">1</span>
+                <span class="btn" id="dua">2</span>
+                <span class="btn" id="tiga">3</span>
+                <span class="btn opr" id="kurang">-</span>
+                <span class="btn btn-bawah-kiri" id="nol">0</span>
+                <span class="btn btn-bawah-kanan" id="hitung">=</span>
+            </div>
+    </div>
+    <h5 class="footermark">This calculator is a result of collaboration between ricky ariansyah and satan<br><br>666</h4>
+
+
+    <script>
+
+            // Deklarasi Variabel
+            var display = document.querySelector("#dispcalc");
+            var btn = document.querySelector(".container-btn");
+
+
+            // Membuat listener dengan fungsi mengambil nilai
+            btn.addEventListener("click", function(e){
+            var btnClick = e.target; 
+            var val = btnClick.innerText; // oper nilai ke dalam variabel mengambil nilai btn
+            
+
+            // if else
+            if(val == "C")
+            {   
+                // kosong display
+                display.value = "";
+            }
+            else if(val == "del")
+            {
+                // memotong panjang
+                display.value = display.value.slice(0, -1);
+            }
+            else if(val == "=")
+            {   
+                // fungsi menghitung
+                display.value = eval(display.value);
+            }
+            else
+            {
+                // menambah nilai display dengan operator
+                display.value = display.value + val; 
+            }
+            });
+    </script>
+</body>
+</html>
