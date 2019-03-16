@@ -1,38 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <style>
-    .biodata {
-        text-align: center;
-        border : 3px solid aqua;
-        border-radius: 10px 10px 10px 10px;
-        margin-left: 25% !important;
-        margin-right: 25% !important;
-        margin-top: 15% !important;
+
+    body {
+        padding: 0;
+        margin: 0;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: #525252;
+    }
+    .layout {
+        margin-top: 1%;
+        margin-bottom: 1%;
+        height: 730px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #F5F5F5;
+    }
+    .layoutbiodata {
+        width: 50%;
+        height: 92%;
+        background: white;
+        margin: 0% 5% !important;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+        border-radius: 5px;
+        /* padding: 1%; */
+        border: 4px solid #1188D7;
+      
+       position: relative;
+
+    }
+    .data {
+        padding: 1%;
     }
 
-    .judul {
-        font-weight: bold;
-        color: deepskyblue
+    .footer {
+        bottom: 0px;
+        /* display: absolute; */
+        position: absolute;
+        display: inline;
+        width: 100%;
+        background: #1188D7;
+        overflow: hidden;
+        color: white;
+        text-align: center;
+      
+    
     }
-   
+    .footer a{
+        text-align: center;
+        color:  white;
+        font-size: 30px;
+        margin: 1%;
+    }
+    .footer p {
+        line-height: 50px;
+    }
+
+    .f-data{
+        margin: 1%;
+    }
+
+    .data h2 {
+        font-weight: 700;
+        color: #525252;
+        text-align: center;
+        letter-spacing: 3px;
+        line-height: 24px;
+        font-size:24px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    
+    .data .wrap {
+        display: inline-block;
+        width: 100%;
+        display: flex;
+       
+    }
+    .data .kiri {
+        width: 40%;
+        display: inline-block;
+        margin: 1%;
+        padding: 1%;
+        align-content: center;
+    }
+
+    .data .kiri img {
+        height: 280px;
+        width: 250px;
+        margin: 5%;
+        box-shadow: 0 6px 10px 0 rgba(0,0,0,0.2);
+        border-radius: 10px;
+    }
+
+    .data .kanan {
+        width: 60%;
+        padding: 1%;
+        display: inline-block;
+        margin: 1%;
+    }
+
+    label {
+        font-size: 20px;
+        letter-spacing: 1px;
+    
+    }
+
+    input[type=text] {
+        width: 100%;
+        padding: 12px 10px;
+        margin: 8px 0;
+        font-size: 16px;
+        box-sizing: border-box;
+        border: none;
+        background: none ;
+        border-bottom: 1px solid #BDBDBD;
+        margin-bottom: 4%;
+        margin-top: 4%;
+        }
+
     </style>
 </head>
-<body style="background-color: #f1f1f1">
-       
-    <div class="biodata">
-            <h2 class="judul">Biodata Saya</h2>
-            <p>Nama Lengkap : <span>Ricky Ariansyah</span></p>
-            <p>Tempat lahir : <span>Sukabumi</span></p>
-            <p>Tanggal Lahir : <span>8 Maret 1996</span></p>
-            <p>Pekerjaan : <span>Mahasiswa</span></p>
-    </div>
-   
+<body>
+    <div class="layout">
+        <div class="layoutbiodata">
+            <div class="data">
+                <h2>BIODATA DIRI </h2>
+                <div class="wrap">
+                    <div class="kiri">
+                        <img src="https://ppgzone-39u4nsxgmu93y.netdna-ssl.com/wp-content/uploads/batman-profile-pic.jpg" alt="">      
+                    </div>
+                    <div class="kanan">
+                        <label for="">Nama Lengkap</label><br>
+                        <input type="text" value="Ricky Ariansyah Achmad Sugandi" disabled>
+                        <label for="">Tanggal Lahir</label>
+                        <input type="text" value="8 Maret 1996" disabled>
+                        <label for="">Tempat Lahir</label>
+                        <input type="text" value="Sukabumi" disabled> 
+                        <label for="">Pekerjaan</label>
+                        <input type="text" value="Mahasiswa" disabled>
+                        <label for="">Passion</label>
+                        <input type="text" value="Front End Developer" disabled>        
+                    </div>       
+                </div>
+            </div>
 
+
+            
+            <div class="footer">  
+              
+                <div class="f-data">
+                        <a target="_blank" href="https://github.com/Rickyarians"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://web.whatsapp.com/send?phone=6282310569056"> <i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+       
+    </div>
 </body>
 </html>
